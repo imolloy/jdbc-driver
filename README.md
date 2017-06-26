@@ -93,10 +93,14 @@ You can now use the jdbc-driver as an interactive shell to issue AQL queries aga
 ```bash
 $ java -jar target/jaql-0.2.1-jar-with-dependencies.jar -h
 usage: AQL Shell
- -a,--auth_token <arg>   Prompt for auth token
+ -a,--auth_token <arg>   Auth token
  -h,--help               Show usage
+ -o,--outputfile <arg>   Prefix to dump queries as csv. Files appear as
+                         [prefix]_[query_number].csv
  -p,--password           Prompt for password
  -s,--server <arg>       QRadar server
+ -ssl <arg>              SSL Verification. Options = FULL_VERIFY,
+                         NO_TRUST, SELF_SIGNED
  -u,--username <arg>     QRadar Username
 $ java -jar target/jaql-0.2.1-jar-with-dependencies.jar -a d0a0295e-031c-45e3-b6f0-84fe26d74d84
 aql> select * from events limit 5;
